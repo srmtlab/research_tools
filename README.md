@@ -18,6 +18,9 @@
 
 ## セキュリティ
 - GitHub Pagesを非公開リポジトリで設定する：ページへのアクセスを制限
+  - Enterprise版じゃないと有料？
+    - 非公開リポジトリから公開ページを作成するのが有料？詳細希望
+  - 候補：Netlify, Cloudflare Pages, Render
 - AWS側でAPI Gatewayの設定する：Lambda関数へのアクセスを制限
   - CORS（クロスオリジンリソースシェアリング）
   - IAMポリシー
