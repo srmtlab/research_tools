@@ -21,6 +21,7 @@
   - Enterprise版じゃないと有料？
     - 非公開リポジトリから公開ページを作成するのが有料？詳細希望
   - 候補：Netlify, Cloudflare Pages, Render
+    - 先生に相談する必要あり
 - AWS側でAPI Gatewayの設定する：Lambda関数へのアクセスを制限
   - CORS（クロスオリジンリソースシェアリング）
   - IAMポリシー
