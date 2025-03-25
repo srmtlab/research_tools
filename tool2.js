@@ -43,7 +43,7 @@ export function handleFormSubmission2(event) {
     document.getElementById("responseArea2").textContent = "読み込み中...";
 
     // Lambdaを呼び出して結果を表示
-    callLambda(question).then(response => {
-        document.getElementById("responseArea").textContent = response;  // Lambdaからの応答を表示
+    callLambda(question2).then(response => {
+        document.getElementById("responseArea2").textContent = response;  // Lambdaからの応答を表示
     });
 }
