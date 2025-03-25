@@ -33,7 +33,7 @@ function generateTabs() {
     document.getElementById("questionForm").addEventListener("submit", handleFormSubmission);
     document.getElementById("questionForm2").addEventListener("submit", handleFormSubmission2);
 
-    showTab(currentTabIndex);
+    showTab(0);
 }
 
 // タブの切り替え
@@ -58,6 +58,4 @@ function showTab(index) {
 // ページロード時にタブを生成
 window.onload = function() {
     generateTabs();
-    tabs[0].classList.add('active');
-    tabTitles[0].classList.add('active');
 };
