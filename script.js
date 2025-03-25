@@ -53,5 +53,4 @@ function showTab(index) {
 // ページロード時にタブを生成
 window.onload = function() {
     generateTabs();
-    showTab(0);  // 最初のタブを表示
 };
