@@ -25,6 +25,7 @@ export function callLambda(question) {
     })
     .then(response => response.json())  // レスポンスをJSONとして処理
     .then(data => {
+        console.log(data.response);
         return data.response;  // Lambdaの応答を返す
     })
     .catch(error => {
