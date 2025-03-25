@@ -48,6 +48,6 @@ export function handleFormSubmission(event) {
         console.log(response);
         //const cleanedText = response.replace(/\\/g, ''); 
         //const responseData = JSON.parse(cleanedText);
-        document.getElementById("responseArea").textContent = response.response;  // Lambdaからの応答を表示
+        document.getElementById("responseArea").textContent = response[response];  // Lambdaからの応答を表示
     });
 }
