@@ -1,6 +1,6 @@
 // tool1.js
 
-export const too21Data = {
+export const tool2Data = {
     title: "ツール2",
     description: "ツール2の説明です。ツール2をテストします",
     class: "tool2_content",
@@ -8,7 +8,7 @@ export const too21Data = {
         <h3>質問を入力して送信</h3>
         <form id="questionForm2">
             <textarea id="userQuestion2" placeholder="質問を入力してください..." rows="4" cols="50" required></textarea><br>
-            <button type="submit">送信</button>
+            <button type="submit2">送信</button>
         </form>
         <div id="responseArea2">ここに応答が表示されます。</div>
     `
