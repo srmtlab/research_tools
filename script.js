@@ -58,5 +58,6 @@ function showTab(index) {
 // ページロード時にタブを生成
 window.onload = function() {
     generateTabs();
-    showTab(0);
+    tabs[0].classList.add('active');
+    tabTitles[0].classList.add('active');
 };
