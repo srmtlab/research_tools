@@ -1,5 +1,7 @@
+import { tool1Data, handleFormSubmission } from './tool1.js';
+
 const tabsData = [
-    { title: "ツール1", description: "ツール1の説明です。", class:"tool1_content", content: "これはタブ1の内容です。" },
+    tool1Data,
     { title: "ツール2", description: "ツール2の説明です。", class:"tool2_content", content: "これはタブ2の内容です。" },
     { title: "ツール3", description: "ツール3の説明です。", class:"tool3_content", content: "これはタブ3の内容です。" },
     { title: "ツール4", description: "ツール4の説明です。", class:"tool4_content", content: "これはタブ4の内容です。" },
