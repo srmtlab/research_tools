@@ -28,9 +28,6 @@ function generateTabs() {
         tabContent.appendChild(div);
     });
 
-    // 初期タブを表示
-    showTab(0);
-
     document.getElementById("questionForm").addEventListener("submit", handleFormSubmission);
     document.getElementById("questionForm2").addEventListener("submit", handleFormSubmission2);
     
