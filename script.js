@@ -9,6 +9,8 @@ const tabsData = [
     { title: "ツール5", description: "ツール5の説明です。", class:"tool5_content", content: "これはタブ5の内容です。" }
 ];
 
+let currentTabIndex = 0;
+
 // タブを動的に生成する
 function generateTabs() {
     const tabTitles = document.getElementById("tabTitles");
@@ -30,7 +32,8 @@ function generateTabs() {
 
     document.getElementById("questionForm").addEventListener("submit", handleFormSubmission);
     document.getElementById("questionForm2").addEventListener("submit", handleFormSubmission2);
-    
+
+    showTab(currentTabIndex);  
 }
 
 // タブの切り替え
@@ -48,6 +51,8 @@ function showTab(index) {
     
     // 左側の説明エリアを更新
     document.getElementById('tabDescription').textContent = tabsData[index].description;
+
+    currentTabIndex = index;
 }
 
 // ページロード時にタブを生成
