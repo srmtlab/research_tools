@@ -43,12 +43,16 @@ export function handleFormSubmission(event) {
     document.getElementById("responseArea").textContent = "読み込み中...";
 
     // Lambdaを呼び出して結果を表示
-    callLambda(question).then(response => {
+    callLambda(question).then(response => response.json()) // JSON形式でレスポンスを解析
+            .then(data => {
+                // レスポンスのbodyに含まれる内容を取得
+                const responseText = data.response;
+        //then(response => {
         // レスポンスの内容をログに出力して確認
-        console.log(response);
+        //console.log(response);
         // Lambdaのレスポンスからbody部分をパース（JSON文字列をオブジェクトに変換)
-        const cleanedText = response.replace(/\\/g, ''); 
-        const responseData = JSON.parse(cleanedText);
+        //const cleanedText = response.replace(/\\/g, ''); 
+        //const responseData = JSON.parse(cleanedText);
         document.getElementById("responseArea").textContent = responseData.response.body;  // Lambdaからの応答を表示
     });
 }
