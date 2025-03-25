@@ -1,8 +1,9 @@
 import { tool1Data, handleFormSubmission } from './tool1.js';
+import { tool2Data, handleFormSubmission2 } from './tool2.js';
 
 const tabsData = [
     tool1Data,
-    { title: "ツール2", description: "ツール2の説明です。", class:"tool2_content", content: "これはタブ2の内容です。" },
+    tool2Data,
     { title: "ツール3", description: "ツール3の説明です。", class:"tool3_content", content: "これはタブ3の内容です。" },
     { title: "ツール4", description: "ツール4の説明です。", class:"tool4_content", content: "これはタブ4の内容です。" },
     { title: "ツール5", description: "ツール5の説明です。", class:"tool5_content", content: "これはタブ5の内容です。" }
@@ -31,6 +32,8 @@ function generateTabs() {
     showTab(0);
 
     document.getElementById("questionForm").addEventListener("submit", handleFormSubmission);
+    document.getElementById("questionForm2").addEventListener("submit2", handleFormSubmission2);
+    
 }
 
 // タブの切り替え
