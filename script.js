@@ -29,6 +29,8 @@ function generateTabs() {
 
     // 初期タブを表示
     showTab(0);
+
+    document.getElementById("questionForm").addEventListener("submit", handleFormSubmission);
 }
 
 // タブの切り替え
