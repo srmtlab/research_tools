@@ -1,5 +1,3 @@
-// tool1.js
-
 export const tool2Data = {
     title: "ツール2",
     description: "ツール2の説明です。ツール2をテストします",
@@ -8,7 +6,7 @@ export const tool2Data = {
         <h3>質問を入力して送信</h3>
         <form id="questionForm2">
             <textarea id="userQuestion2" placeholder="質問を入力してください..." rows="4" cols="50" required></textarea><br>
-            <button type="submit2">送信</button>
+            <button type="submit">送信</button>
         </form>
         <div id="responseArea2">ここに応答が表示されます。</div>
     `
@@ -43,7 +41,7 @@ export function handleFormSubmission2(event) {
     document.getElementById("responseArea2").textContent = "読み込み中...";
 
     // Lambdaを呼び出して結果を表示
-    callLambda(question2).then(response => {
+    callLambda(question).then(response => {  // 修正: question2 -> question
         document.getElementById("responseArea2").textContent = response;  // Lambdaからの応答を表示
     });
 }
