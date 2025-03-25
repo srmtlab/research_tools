@@ -46,7 +46,6 @@ export function handleFormSubmission(event) {
     callLambda(question).then(response => {
         // レスポンスの内容をログに出力して確認
         console.log(response);
-        // Lambdaのレスポンスからbody部分をパース（JSON文字列をオブジェクトに変換)
         //const cleanedText = response.replace(/\\/g, ''); 
         //const responseData = JSON.parse(cleanedText);
         document.getElementById("responseArea").textContent = "処理完了";  // Lambdaからの応答を表示
