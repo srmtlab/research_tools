@@ -21,7 +21,7 @@ export function callLambda(question) {
     return fetch(apiEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text: question })
+        body: JSON.stringify({ input: question })
     })
     .then(response => response.json())  // レスポンスをJSONとして処理
     .then(data => {
