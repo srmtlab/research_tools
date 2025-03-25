@@ -32,7 +32,7 @@ function generateTabs() {
     showTab(0);
 
     document.getElementById("questionForm").addEventListener("submit", handleFormSubmission);
-    document.getElementById("questionForm2").addEventListener("submit2", handleFormSubmission2);
+    document.getElementById("questionForm2").addEventListener("submit", handleFormSubmission2);
     
 }
 
