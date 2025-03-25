@@ -26,7 +26,7 @@ export function callLambda(question) {
     .then(response => response.json())  // レスポンスをJSONとして処理
     .then(data => {
         console.log(data.response);
-        return data.response;  // Lambdaの応答を返す
+        return data.body;  // Lambdaの応答を返す
     })
     .catch(error => {
         console.error('Error calling Lambda:', error);
@@ -49,6 +49,6 @@ export function handleFormSubmission(event) {
         console.log(response);
         //const cleanedText = response.replace(/\\/g, ''); 
         //const responseData = JSON.parse(cleanedText);
-        document.getElementById("responseArea").textContent = "処理完了";  // Lambdaからの応答を表示
+        document.getElementById("responseArea").textContent = response.response;  // Lambdaからの応答を表示
     });
 }
