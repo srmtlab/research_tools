@@ -58,5 +58,5 @@ function showTab(index) {
 // ページロード時にタブを生成
 window.onload = function() {
     generateTabs();
-    showTab(currentTabIndex);
+    showTab(0);
 };
