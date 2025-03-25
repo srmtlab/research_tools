@@ -16,7 +16,7 @@ export const tool1Data = {
 
 // Lambdaを呼び出す関数
 export function callLambda(question) {
-    const apiEndpoint = 'https://haozlq6lqg.execute-api.ap-southeast-2.amazonaws.com/test2/callback';  // 実際のAPIエンドポイントに変更
+    const apiEndpoint = 'https://haozlq6lqg.execute-api.ap-southeast-2.amazonaws.com/test3/callback';  // 実際のAPIエンドポイントに変更
 
     return fetch(apiEndpoint, {
         method: 'POST',
