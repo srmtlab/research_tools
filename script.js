@@ -13,7 +13,6 @@ let currentTabIndex = 0;
 
 // タブを動的に生成する
 function generateTabs() {
-    showTab(currentTabIndex);
     const tabTitles = document.getElementById("tabTitles");
     const tabContent = document.getElementById("tabContent");
 
@@ -34,7 +33,7 @@ function generateTabs() {
     document.getElementById("questionForm").addEventListener("submit", handleFormSubmission);
     document.getElementById("questionForm2").addEventListener("submit", handleFormSubmission2);
 
-      
+    showTab(currentTabIndex);
 }
 
 // タブの切り替え
@@ -59,4 +58,5 @@ function showTab(index) {
 // ページロード時にタブを生成
 window.onload = function() {
     generateTabs();
+    showTab(currentTabIndex);
 };
