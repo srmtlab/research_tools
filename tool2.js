@@ -5,7 +5,7 @@ export const tool2Data = {
     description: "ツール2の説明です。",
     class: "tool2_content",
     content: `
-        <textarea id="markdownArea" readonly></textarea>
+        <textarea id="markdownArea" readonly>あいうえお</textarea>
         <button id="editBtn">編集</button>
         <button id="saveBtn" style="display:none">保存</button>
     `
@@ -23,11 +23,12 @@ export function initializeMarkdownEditor({
   const saveBtn = document.getElementById(saveBtnId);
 
   // 初期データの取得
-  fetch(apiEndpoint)
+  /*fetch(apiEndpoint)
     .then(response => response.text())
     .then(text => {
       area.value = text;
-    });
+    });*/
+
 
   // 編集ボタンの挙動
   editBtn.onclick = () => {
