@@ -3,7 +3,7 @@
 export const tool2Data = {
     title: "ツール2",
     description: "ツール2の説明です。",
-    class: "tool1_content",
+    class: "tool2_content",
     content: `
         <textarea id="markdownArea" readonly></textarea>
         <button id="editBtn">編集</button>
