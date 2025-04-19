@@ -56,7 +56,7 @@ export function callLambda(question) {
 }
 
 // フォーム送信時の処理
-export function handleFormSubmission(event) {
+/*export function handleFormSubmission(event) {
     event.preventDefault();  // フォームのデフォルト送信動作を防ぐ
 
     const question = document.getElementById("userQuestion").value;  // ユーザーの入力を取得
@@ -73,4 +73,4 @@ export function handleFormSubmission(event) {
         document.getElementById("responseArea").textContent = response.text;  // Lambdaからの応答を表示
         console.log(document.getElementById("responseArea").textContent)
     });
-}
+}*/
