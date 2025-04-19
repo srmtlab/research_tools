@@ -1,5 +1,5 @@
 import { tool1Data, handleFormSubmission } from './tool1.js';
-import { tool2Data, handleFormSubmission2 } from './tool2.js';
+//import { tool2Data, handleFormSubmission2 } from './tool2.js';
 
 const tabsData = [
     tool1Data,
