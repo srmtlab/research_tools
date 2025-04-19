@@ -22,7 +22,7 @@ export const tool2Data = {
                   saveBtn.style.display = "inline"
                 }
                 saveBtn.onclick = () => {
-                  fetch('https://your-api-gateway-url', {
+                  fetch('https://haozlq6lqg.execute-api.ap-southeast-2.amazonaws.com/test3/callback', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ content: area.value })
