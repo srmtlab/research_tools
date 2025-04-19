@@ -37,7 +37,7 @@ export const tool2Data = {
 };
 
 // Lambdaを呼び出す関数
-export function callLambda(question) {
+/*export function callLambda(question) {
     const apiEndpoint = 'https://haozlq6lqg.execute-api.ap-southeast-2.amazonaws.com/test3/callback';  // 実際のAPIエンドポイントに変更
 
     return fetch(apiEndpoint, {
@@ -53,7 +53,7 @@ export function callLambda(question) {
         console.error('Error calling Lambda:', error);
         return 'エラーが発生しました。';
     });
-}
+}*/
 
 // フォーム送信時の処理
 /*export function handleFormSubmission(event) {
