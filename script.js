@@ -31,7 +31,7 @@ function generateTabs() {
     });
 
     document.getElementById("questionForm").addEventListener("submit", handleFormSubmission);
-    document.getElementById("questionForm2").addEventListener("submit", handleFormSubmission2);
+    //document.getElementById("questionForm2").addEventListener("submit", handleFormSubmission2);
 
     showTab(currentTabIndex);
 }
