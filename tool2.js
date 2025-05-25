@@ -1,4 +1,6 @@
-// tool1.js
+// tool2.js
+
+import { marked } from 'https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js';
 
 export const tool2Data = {
     title: "ツール2",
@@ -6,7 +8,8 @@ export const tool2Data = {
     class: "tool2_content",
     content: `
         <div class="markdown-editor">
-            <textarea id="markdownArea" readonly></textarea>
+            <textarea id="markdownArea" style="display:none"></textarea>
+            <div id="markdownView"></div>
             <div class="button-group">
                 <button id="editBtn">編集</button>
                 <button id="saveBtn" style="display:none">保存</button>
@@ -18,11 +21,13 @@ export const tool2Data = {
 // Lambdaを呼び出す関数
 export function initializeMarkdownEditor({
     areaId = "markdownArea",
+    viewId = "markdownView",
     editBtnId = "editBtn",
     saveBtnId = "saveBtn",
     apiEndpoint = 'https://bwwmm2hzxb.execute-api.ap-southeast-2.amazonaws.com/test/wordlist'
 } = {}) {
     const area = document.getElementById(areaId);
+    const view = document.getElementById(viewId);
     const editBtn = document.getElementById(editBtnId);
     const saveBtn = document.getElementById(saveBtnId);
 
@@ -45,6 +50,7 @@ export function initializeMarkdownEditor({
             return response.text();
         })
         .then(text => {
+            view.innerHTML = marked.parse(text);
             area.value = text;
         })
         .catch(error => {
@@ -54,7 +60,8 @@ export function initializeMarkdownEditor({
 
     // 編集ボタンの挙動
     editBtn.onclick = () => {
-        area.removeAttribute("readonly");
+        view.style.display = "none";
+        area.style.display = "block";
         editBtn.style.display = "none";
         saveBtn.style.display = "inline";
     };
@@ -70,7 +77,11 @@ export function initializeMarkdownEditor({
             if (!response.ok) {
                 throw new Error('保存に失敗しました');
             }
-            area.setAttribute("readonly", true);
+            else{
+              view.innerHTML = marked.parse(area.value);
+            }
+            area.style.display = "none";
+            view.style.display = "block";
             editBtn.style.display = "inline";
             saveBtn.style.display = "none";
         })
