@@ -1,6 +1,6 @@
 import { tool1Data, handleFormSubmission } from './tool1.js';
-import { tool2Data } from './tool2.js';
-//import { tool2Data, handleFormSubmission2 } from './tool2.js';
+import { initializeMarkdownEditor, tool2Data } from './tool2.js';
+
 
 const tabsData = [
     tool1Data,
@@ -10,7 +10,7 @@ const tabsData = [
     { title: "ツール5", description: "ツール5の説明です。", class:"tool5_content", content: "これはタブ5の内容です。" }
 ];
 
-let currentTabIndex = 0;
+let currentTabIndex = 1;
 
 // タブを動的に生成する
 function generateTabs() {
@@ -32,7 +32,14 @@ function generateTabs() {
     });
 
     document.getElementById("questionForm").addEventListener("submit", handleFormSubmission);
-    //document.getElementById("questionForm2").addEventListener("submit", handleFormSubmission2);
+    
+    // マークダウンエディターの初期化
+    const markdownEditorConfig = {
+        areaId: "markdownArea",
+        editBtnId: "editBtn",
+        saveBtnId: "saveBtn"
+    };
+    initializeMarkdownEditor(markdownEditorConfig);
 
     showTab(currentTabIndex);
 }
